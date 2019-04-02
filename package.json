@@ -12,6 +12,7 @@
   "author": "Steven Ceuppens",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "frameguard": "^3.0.0"
   }
 }
