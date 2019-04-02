@@ -71,3 +71,32 @@ and type the following. This will show you the HTML content of the iFrame.
 $ document.getElementById('iframe6').contentWindow.document.body;
 > SecurityError: Sandbox access violation: Blocked a frame at "http://127.0.0.1:3000" from accessing a cross-origin frame.  The frame being accessed is sandboxed and lacks the "allow-same-origin" flag.
 ```
+
+## Test case 3 - protected iframe (Change sandbox attributes)
+
+Try to remove sandbox attribute and access content from RootApp to GuestApp (Drop Sandbox)
+
+Open javascript console inside the webbrowser (right click, inspect)
+and type the following. This will show you the HTML content of the iFrame.
+
+Remove sandbox attribute:
+```bash
+$ document.getElementById('iframe6').removeAttribute('sandbox');
+```
+
+Try to access content: (fails as removing attributes do not take effect without reloading)
+```bash
+$ document.getElementById('iframe6').contentWindow.document.body;
+> SecurityError: Sandbox access violation: Blocked a frame at "http://127.0.0.1:3000" from accessing a cross-origin frame.  The frame being accessed is sandboxed and lacks the "allow-same-origin" flag.
+```
+
+Reload content:
+```bash
+$ document.getElementById('iframe6').src = document.getElementById('iframe6').src;
+```
+
+Access content:
+```bash
+$ document.getElementById('iframe6').contentWindow.document.body;
+> SecurityError: Blocked a frame with origin "http://127.0.0.1:3000" from accessing a cross-origin frame. Protocols, domains, and ports must match.
+```
