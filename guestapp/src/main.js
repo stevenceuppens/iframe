@@ -41,7 +41,7 @@ function startTime() {
     m=checkTime(m);
     s=checkTime(s);
     document.getElementById('datetime').innerHTML=" - "+h+":"+m+":"+s;
-    t=setTimeout('startTime()',500);
+    t=setTimeout(startTime, 500);
 }
 
 function checkTime(i) {
@@ -52,5 +52,5 @@ function checkTime(i) {
 }
 
 function showForm() {
-    document.getElementById('myForm').style.visibility = 'visible';
+    document.getElementById('myForm').hidden = false;
 }

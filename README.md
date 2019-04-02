@@ -42,11 +42,23 @@ iFrame configurations:
 - iFrame1: Cross Origin, Sandbox
 - iFrame1: Cross Origin, Sandbox, Allow-Srcipts
 
-## Sandbox testing
+## Security features
+
+### Sandbox checking
+
 I added simple javascript library, that is loaded by the GuestApp. 
 The library checks if we are in a sandboxed iFrame. If this is the case we load the HTML (dumy form)
 
 Changing the sanbox attributes after the page has loaded does not affect the iFrame. A page reload is required.
+
+### Content-Security-Policy (CSP) definitions
+
+- CSP: frame-ancestors (locks down which hosts are allowed to embed this frame)
+- CSP: script-src (Inline eval is not allowed by default)
+
+### X-Frame-Option
+
+I added this header, but it's not supported by chrome and safari.. and also redundant with CSP frame-ancestors 
 
 ## Test case 1 - unprotected iframe (RootApp can access GuestApp)
 

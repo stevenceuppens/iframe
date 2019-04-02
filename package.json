@@ -12,7 +12,8 @@
   "author": "Steven Ceuppens",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "frameguard": "^3.0.0"
+    "helmet": "^3.16.0"
   }
 }
