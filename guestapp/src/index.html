@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GuestApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="sandproof.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="load()">
+    <h5>GuestApp</h5>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <ul class="list-group">
+                    <li id="test-javascript" class="list-group-item list-group-item-danger">Can we execute javascript? <span id="datetime"></span></li>
+                    <li id="test-sandbox" class="list-group-item list-group-item-danger">Are we sandboxed?</li>
+                </ul>
+            </div>
+            <form class="col-6 myForm" id="myForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>  
+        </div>
+    </div>
+</body>
+</html>

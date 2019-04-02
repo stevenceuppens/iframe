@@ -1,0 +1,14 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.guestappiframe {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    height: 320px;
+}

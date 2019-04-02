@@ -1,0 +1,17 @@
+{
+  "name": "iframe",
+  "version": "1.0.0",
+  "description": "iframe test",
+  "scripts": {
+    "run": "node ./webserver/src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/stevenceuppens/iframe"
+  },
+  "author": "Steven Ceuppens",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
